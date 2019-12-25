@@ -1,0 +1,12 @@
+<?php $comments = $this->getListComments() ?>
+<?php foreach($comments as $cm): 
+ echo $cm->getDescription() ?>					
+<?php endforeach; ?>
+
+
+<form action="<?php echo $block->getFormAction() ?>" method="post">
+    <input name="name" type="text">
+    <input name="email" type="text">
+    <input name="description" type="text">
+    <input type="submit">
+</form>
