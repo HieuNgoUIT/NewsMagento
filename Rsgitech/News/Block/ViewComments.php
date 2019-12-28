@@ -21,7 +21,10 @@ Class ViewComments extends \Magento\Framework\View\Element\Template
 		
 		return $comments;
 	}
-    
+    public function getId()
+	{
+		return  $this->getRequest()->getParam('id');		
+	}
     public function getListComments()
 	{	
 		$id = $this->getRequest()->getParam('id');			

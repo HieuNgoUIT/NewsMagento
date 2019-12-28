@@ -27,19 +27,20 @@ class AddComment extends \Magento\Framework\App\Action\Action
         $name   = $post['name'];
         $email    = $post['email'];
         $description = $post['description'];   
+        $id = $post['id'];
 
         $resultRedirect = $this->resultRedirect->create(ResultFactory::TYPE_REDIRECT);
         $resultRedirect->setUrl($this->_redirect->getRefererUrl());
         $model = $this->allCommentsFactory->create();
-        $data= array("comment_id" => '8',
-        "comment_news_id" => '1',
+        $data= array(
+        "comment_news_id" => $id,
         "name" => $name,
         "email" => $email,
         "description" => $description);
 		$model->setData($data);
         $saveData = $model->save();
         if($saveData){
-            $this->messageManager->addSuccess( __('Insert Record Successfully !') );
+            $this->messageManager->addSuccess( __('Insert Comment Successfully !') );
         }
 		return $resultRedirect;
 	
