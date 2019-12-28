@@ -31,7 +31,7 @@ Class ViewComments extends \Magento\Framework\View\Element\Template
 
 	public function getFormAction()
     {           
-        return 'magento2/news/index/addcomment';
+        return $this->get_url('/news/index/addcomment');
         // here controller_name is index, action is booking
     }
 
