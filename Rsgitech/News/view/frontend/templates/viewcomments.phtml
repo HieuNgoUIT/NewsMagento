@@ -1,13 +1,37 @@
-<?php $comments = $this->getListComments() ?>
-<?php foreach($comments as $cm): 
- echo $cm->getDescription() ?>					
-<?php endforeach; ?>
+<hr>
+<div class="commment-section">
+    <h2>Bình luận của bài viết</h2>
+    <?php $comments = $this->getListComments() ?>  
+    <?php foreach($comments as $cm):?>
+        
+        
+         <span style="font-weight: 900"><?php echo $cm->getName()?> </span> 
+        
+         <span style="margin-left:3px"> <?php echo $cm->getEmail()?> </span>
+         <span style="margin-left:10px"> <?php echo $cm->getCreateAt() ?></span>
+         <?php echo "<br>"?>
+         <p><?php echo $cm->getDescription() ?> </p>
+         <?php echo "<br>"?>	
+             
+       
+    
+   
+
+    <?php endforeach; ?>
+</div>
 
 
-<form action="<?php echo $this->getUrl('news/index/addcomment') ?>" method="post">
-    <input name="id" value="<?php echo $this->getId() ?>" type='hidden'>    
-    <input name="name" type="text">
-    <input name="email" type="text">
-    <input name="description" type="text">
-    <input type="submit">
-</form>
+<hr>
+<div class="commment-insert">
+    <h2>Thêm binh luận của bạn</h2>
+    <form action="<?php echo $this->getUrl('news/index/addcomment') ?>" method="post">
+        <input name="id" value="<?php echo $this->getId() ?>" type='hidden'>    
+        <label>Your name: </label>
+        <input name="name" type="text">
+        <label>Your email: </label>
+        <input name="email" type="text" style="margin-top:2px">
+        <label>Your content: </label>
+        <input name="description" type="text" style="margin-top:2px">
+        <input type="submit" value="Gửi">
+    </form>
+</div>

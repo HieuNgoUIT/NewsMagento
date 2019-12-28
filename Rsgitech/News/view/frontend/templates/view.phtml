@@ -1,5 +1,8 @@
 <div class="rsgitech-news">
 	<?php $news = $this->getNews() ?>
+	<h1><?php echo $news->getTitle() ?></h1>
+	<h4><?php echo $news->getSubTitle() ?></h4>
 	<div class="rsg-news-time"><?php echo $news->getCreatedAt() ?></div>
+	<div class="rsg-news-img"><img src="<?php echo $news->getImage() ?>"></div>
 	<div class="rsg-news-desc"><?php echo $news->getDescription() ?></div>	
 </div>

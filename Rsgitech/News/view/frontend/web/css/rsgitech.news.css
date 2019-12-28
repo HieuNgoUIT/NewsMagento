@@ -33,3 +33,13 @@
 .rsgitech-news a:hover {
 	text-decoration:none;
 }
+.commment-section{
+	margin-top: 10px;
+}
+.commment-section li{
+	margin:1px;
+	border: 1px solid black;
+}
+.commment-insert{
+	margin-top: 10px;
+}
