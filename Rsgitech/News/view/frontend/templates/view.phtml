@@ -1,7 +1,15 @@
 <div class="rsgitech-news">
 	<?php $news = $this->getNews() ?>
-	<h1><?php echo $news->getTitle() ?></h1>
+	<?php $newsmeta= $this->getAttributeForFilter('key','weather'); ?>	
+	<h1 style="font-weight: 900"><?php echo $news->getTitle() ?></h1>
 	<h4><?php echo $news->getSubTitle() ?></h4>
+	<?php	
+		if (isset($newsmeta))
+		{
+			$key = $newsmeta['key'];
+			$value=$newsmeta['value']; ?>
+			<p style="color: red"> Today <?php echo $key ?> is <?php echo $value?> </p> 
+	<?php	}?>
 	<div class="rsg-news-time"><?php echo $news->getCreatedAt() ?></div>
 	<div class="rsg-news-img"><img src="<?php echo $news->getImage() ?>"></div>
 	<div class="rsg-news-desc"><?php echo $news->getDescription() ?></div>	

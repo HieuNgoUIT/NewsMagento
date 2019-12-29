@@ -26,5 +26,6 @@ class AllnewsMeta extends AbstractModel implements IdentityInterface
         $values = [];
         return $values;
     }
+    
 }
 ?>

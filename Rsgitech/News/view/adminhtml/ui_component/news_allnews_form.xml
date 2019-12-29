@@ -93,7 +93,7 @@
                 <dataScope>title</dataScope>
             </settings>
         </field>
-         <field name="subtitle" sortOrder="20" formElement="input">
+         <field name="subtitle" sortOrder="10" formElement="input">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="source" xsi:type="string">allnews</item>
@@ -106,6 +106,21 @@
                 <dataType>text</dataType>
                 <label translate="true">News SubTitle</label>
                 <dataScope>subtitle</dataScope>
+            </settings>
+        </field>
+        <field name="image" sortOrder="10" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">allnews</item>
+                </item>
+            </argument>
+            <settings>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+                <dataType>text</dataType>
+                <label translate="true">Image</label>
+                <dataScope>image</dataScope>
             </settings>
         </field>
     </fieldset>

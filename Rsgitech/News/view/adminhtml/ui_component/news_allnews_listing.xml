@@ -14,20 +14,7 @@
                 <item name="class" xsi:type="string">primary</item>
                 <item name="url" xsi:type="string">*/*/new</item>
             </item>
-            <item name="addcustom" xsi:type="array">
-                <item name="name" xsi:type="string">addcustom</item>
-                <item name="label" xsi:type="string" translate="true">Add Custom Field</item>
-                <item name="class" xsi:type="string">primary</item>
-                <item name="url" xsi:type="string">*/*/customfield</item>
-            </item>
-        </item>
-        <item name="buttons1" xsi:type="array">
-            <item name="add" xsi:type="array">
-                <item name="name" xsi:type="string">add1</item>
-                <item name="label" xsi:type="string" translate="true">Add Custom Field</item>
-                <item name="class" xsi:type="string">primary</item>
-                <item name="url" xsi:type="string">*/*/customfield</item>
-            </item>
+            
         </item>
     </argument>
 	<dataSource name="news_allnews_listing_data_source">

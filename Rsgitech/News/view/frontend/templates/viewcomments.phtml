@@ -1,6 +1,6 @@
 <hr>
 <div class="commment-section">
-    <h2>Bình luận của bài viết</h2>
+    <h2 style="font-weight: 900">Bình luận của bài viết</h2>
     <?php $comments = $this->getListComments() ?>  
     <?php foreach($comments as $cm):?>
         
@@ -19,11 +19,9 @@
 
     <?php endforeach; ?>
 </div>
-
-
 <hr>
 <div class="commment-insert">
-    <h2>Thêm binh luận của bạn</h2>
+    <h2 style="font-weight: 900">Thêm bình luận của bạn</h2>
     <form action="<?php echo $this->getUrl('news/index/addcomment') ?>" method="post">
         <input name="id" value="<?php echo $this->getId() ?>" type='hidden'>    
         <label>Your name: </label>

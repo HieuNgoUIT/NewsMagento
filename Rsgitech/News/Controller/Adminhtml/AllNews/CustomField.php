@@ -3,7 +3,7 @@ namespace Rsgitech\News\Controller\Adminhtml;
 
 use Magento\Framework\Controller\ResultFactory;
 
-class SaveCustomField extends \Magento\Framework\App\Action\Action
+class CustomField extends \Magento\Framework\App\Action\Action
 {
 	protected $pageFactory;
 	protected $newsMetaFactory;
